@@ -1,10 +1,9 @@
-def UglyNumber(n):
-    x=list(str(n))
-    k=len(x)
-    for i in range(k-1):
-        if x[i-1]>x[i]:
-            x[i]=chr(ord(x[i]-1)
-        k=i
-    for i in range(k+1,len(x)):
-        x[i]="9"
-    return x
+def UglyNumber(a):
+    while a%5==0:
+        a//=5
+    while a%3==0:
+        a//=3
+    while a%2==0:
+        a//=2
+    return "Yes" if a===1 else "No"
+x=int(input())
